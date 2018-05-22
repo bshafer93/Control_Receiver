@@ -4,6 +4,9 @@ import time
 
 
 MyAV = DenonAVR("192.168.0.57",23)
-MyAV.ChangeInput("DVD")
+MyAV.ChangeInputBluRay()
 time.sleep(5)
-MyAV.ChangeInput("GAME")
+MyAV.ChangeInputCBL()
+time.sleep(5)
+MyAV.ChangeInputGame()
+MyAV.InputStatus()

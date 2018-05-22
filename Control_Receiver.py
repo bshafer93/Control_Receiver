@@ -41,8 +41,23 @@ class DenonAVR:
     def MuteStatus(self):
         self.Send_Cmd("MU?")
 
-    def ChangeInput(self,Source):
-        self.Send_Cmd("SI" + Source)
+    def ChangeInputCBL(self):
+        self.Send_Cmd("SITV/CBL")
+
+    def ChangeInputDVD(self):
+        self.Send_Cmd("SIDVD")
+
+    def ChangeInputBluRay(self):
+        self.Send_Cmd("SIBD")
+
+    def ChangeInputGame(self):
+        self.Send_Cmd("SIGAME")
+
+    def ChangeInputMediaPlayer(self):
+        self.Send_Cmd("SIMPLAY")
+
+    def InputStatus(self):
+        self.Send_Cmd("SI?")
 
     def Send_Cmd(self,cmd):
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
