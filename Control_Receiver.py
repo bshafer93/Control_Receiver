@@ -42,7 +42,7 @@ class DenonAVR:
         self.Send_Cmd("MU?")
 
     def ChangeInputCBL(self):
-        self.Send_Cmd("SITV/CBL")
+        self.Send_Cmd("SISAT/CBL")
 
     def ChangeInputDVD(self):
         self.Send_Cmd("SIDVD")
