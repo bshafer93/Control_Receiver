@@ -11,6 +11,8 @@ class DenonAVR:
     
     def TurnOff(self):
         self.Send_Cmd("PWSTANDBY")
+    def PowerStatus(self):
+        self.Send_Cmd("PW?")
 
     def Send_Cmd(self,cmd):
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -23,7 +25,6 @@ class DenonAVR:
     def Receive_Data(self,sock):
         data = sock.recv(4096)
         print ("received message:", data)
-    
         sock.close()
 
 
