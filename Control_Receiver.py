@@ -22,7 +22,7 @@ class DenonAVR:
         self.Send_Cmd("MVDOWN")
 
     def VolumeSet(self,Amount):
-        self.Send_Cmd("MVUP"+ Amount)
+        self.Send_Cmd("MVUP"+ str(Amount))
 
     def VolumeStatus(self):
         self.Send_Cmd("MV?")
