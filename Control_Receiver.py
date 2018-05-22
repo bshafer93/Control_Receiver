@@ -11,8 +11,21 @@ class DenonAVR:
     
     def TurnOff(self):
         self.Send_Cmd("PWSTANDBY")
+
     def PowerStatus(self):
         self.Send_Cmd("PW?")
+
+    def VolumeUp(self):
+        self.Send_Cmd("MVUP")
+
+    def VolumeDown(self):
+        self.Send_Cmd("MVDOWN")
+
+    def VolumeSet(self,Amount):
+        self.Send_Cmd("MVUP"+ Amount)
+
+    def VolumeStatus(self):
+        self.Send_Cmd("MV?")
 
     def Send_Cmd(self,cmd):
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
