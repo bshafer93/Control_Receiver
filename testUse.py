@@ -1,5 +1,4 @@
 from Control_Receiver import DenonAVR
-
 import time
 
 
