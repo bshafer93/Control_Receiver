@@ -32,6 +32,18 @@ class DenonAVR:
     def VolumeStatus(self):
         self.Send_Cmd("MV?")
 
+    def MuteOn(self):
+        self.Send_Cmd("MUON") 
+
+    def MuteOff(self):
+        self.Send_Cmd("MUOFF")
+
+    def MuteStatus(self):
+        self.Send_Cmd("MU?")
+
+    def ChangeInput(self,Source):
+        self.Send_Cmd("SI" + Source)
+
     def Send_Cmd(self,cmd):
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         sock.settimeout(3)
