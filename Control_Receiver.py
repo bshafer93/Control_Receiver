@@ -1,8 +1,10 @@
 import socket
 
 class DenonAVR:
-    AV_IP = "192.168.0.57"
-    AV_PORT = 23
+
+    def __init__(self,AV_IP,AV_PORT):
+        self.AV_IP = AV_IP
+        self.AV_PORT = AV_PORT
 
     def TurnOn(self):
         self.Send_Cmd("PWON")
