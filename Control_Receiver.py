@@ -63,7 +63,7 @@ class DenonAVR:
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         sock.settimeout(3)
         sock.connect((self.AV_IP, self.AV_PORT))
-        full_cmd = bytes(cmd + "\r")
+        full_cmd = bytes(cmd + "\r",'utf-8')
         sock.sendall(full_cmd)
         self.Receive_Data(sock)
 
